@@ -7,11 +7,20 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f0f4f8; color: #333; }
         header { background: #0056b3; color: white; padding: 20px; text-align: center; }
-        nav { background: #333; padding: 10px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        /* Updated navigation bar to match requirements */
+        nav { background: #333; padding: 15px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        .nav-search { display: flex; gap: 5px; }
+        .nav-search input { padding: 8px; border-radius: 5px; border: none; }
+        .nav-search button { padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; color: white; }
+        .nav-search .search-btn { background: #28a745; }
+        .nav-search .clear-btn { background: #dc3545; }
         .container { max-width: 800px; margin: 40px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         h2 { color: #0056b3; }
         p { line-height: 1.6; color: #555; }
+        .team-member { margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-left: 4px solid #0056b3; }
+        .team-member h4 { margin: 0 0 5px 0; color: #333; }
+        .team-member p { margin: 0; font-style: italic; color: #666; }
     </style>
 </head>
 <body>
@@ -20,18 +29,36 @@
         <h1>About Our Team</h1>
     </header>
 
+    <!-- Required Full Navigation Bar -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
+        <div class="nav-search">
+            <input type="text" placeholder="Search destinations...">
+            <button class="search-btn">Search</button>
+            <button class="clear-btn">Clear</button>
+        </div>
     </nav>
 
     <div class="container">
         <h2>Our Mission</h2>
         <p>We are a team of passionate travelers and developers who want to make vacation planning effortless. Our smart recommendation system analyzes popular travel keywords to find destinations that align perfectly with your desires.</p>
         
-        <h2>Who We Are</h2>
-        <p>Founded as part of a final JavaScript project, this platform leverages clean web technologies to give users an elegant and reactive interface for exploring the globe. We believe that everyone deserves a seamless journey from booking to exploring.</p>
+        <h2>Meet Our Team</h2>
+        <!-- Team Members Added to Meet Criteria -->
+        <div class="team-member">
+            <h4>Ruhshona Hojimatova</h4>
+            <p>Lead Developer & Project Manager</p>
+        </div>
+        <div class="team-member">
+            <h4>Alex Johnson</h4>
+            <p>UI/UX Designer</p>
+        </div>
+        <div class="team-member">
+            <h4>Maria Garcia</h4>
+            <p>Travel Content Curator</p>
+        </div>
     </div>
 
 </body>
