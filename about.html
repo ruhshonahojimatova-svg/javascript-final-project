@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Us - JavaScript Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Travel Recommendations</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f9; }
-        nav { display: flex; gap: 15px; background: #333; padding: 10px; border-radius: 5px; }
-        nav a { color: white; text-decoration: none; padding: 8px 16px; border-radius: 4px; }
-        nav a:hover, nav a.active { background: #555; }
-        .container { background: white; padding: 20px; margin-top: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f0f4f8; color: #333; }
+        header { background: #0056b3; color: white; padding: 20px; text-align: center; }
+        nav { background: #333; padding: 10px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        .container { max-width: 800px; margin: 40px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { color: #0056b3; }
+        p { line-height: 1.6; color: #555; }
     </style>
 </head>
 <body>
 
+    <header>
+        <h1>About Our Team</h1>
+    </header>
+
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html" class="active">About Us</a>
+        <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
     </nav>
 
     <div class="container">
-        <h1>О нас (About Us)</h1>
-        <h2>Информация о компании</h2>
-        <p>Наша компания занимается созданием современных интерактивных веб-приложений.</p>
-        <h2>Инструкции для членов команды</h2>
-        <ul>
-            <li>Всегда пишите чистый и комментируемый JavaScript-код.</li>
-            <li>Проверяйте работоспособность интерфейса перед отправкой изменений в репозиторий.</li>
-            <li>Используйте семантические теги HTML5 для структуры страниц.</li>
-        </ul>
+        <h2>Our Mission</h2>
+        <p>We are a team of passionate travelers and developers who want to make vacation planning effortless. Our smart recommendation system analyzes popular travel keywords to find destinations that align perfectly with your desires.</p>
+        
+        <h2>Who We Are</h2>
+        <p>Founded as part of a final JavaScript project, this platform leverages clean web technologies to give users an elegant and reactive interface for exploring the globe. We believe that everyone deserves a seamless journey from booking to exploring.</p>
     </div>
 
 </body>
