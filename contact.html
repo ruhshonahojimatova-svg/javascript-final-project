@@ -7,15 +7,22 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f0f4f8; color: #333; }
         header { background: #0056b3; color: white; padding: 20px; text-align: center; }
-        nav { background: #333; padding: 10px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        /* Updated navigation bar to match requirements */
+        nav { background: #333; padding: 15px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        .nav-search { display: flex; gap: 5px; }
+        .nav-search input { padding: 8px; border-radius: 5px; border: none; }
+        .nav-search button { padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; color: white; }
+        .nav-search .search-btn { background: #28a745; }
+        .nav-search .clear-btn { background: #dc3545; }
+        
         .container { max-width: 500px; margin: 40px auto; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         h2 { color: #0056b3; text-align: center; }
         .form-group { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
-        button { width: 100%; padding: 12px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; }
-        button:hover { background: #218838; }
+        input[type="text"], input[type="email"], textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .submit-btn { width: 100%; padding: 12px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; margin-top: 10px;}
+        .submit-btn:hover { background: #218838; }
     </style>
 </head>
 <body>
@@ -24,15 +31,21 @@
         <h1>Get In Touch</h1>
     </header>
 
+    <!-- Required Full Navigation Bar -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
+        <div class="nav-search">
+            <input type="text" placeholder="Search destinations...">
+            <button class="search-btn">Search</button>
+            <button class="clear-btn">Clear</button>
+        </div>
     </nav>
 
     <div class="container">
         <h2>Contact Form</h2>
-        <!-- Форма обратной связи -->
+        <!-- Contact Form -->
         <form onsubmit="alert('Thank you for your message!'); return false;">
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -46,7 +59,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" rows="5" required placeholder="How can we help you?"></textarea>
             </div>
-            <button type="submit">Send Message</button>
+            <button type="submit" class="submit-btn">Send Message</button>
         </form>
     </div>
 
