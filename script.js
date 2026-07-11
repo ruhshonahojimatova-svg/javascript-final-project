@@ -1,4 +1,4 @@
-// Полная база данных, которая исправит ошибку поиска
+// База данных рекомендаций
 const travelData = {
     beach: [
         {
@@ -52,7 +52,6 @@ function handleSearch() {
         return;
     }
 
-    // Если слово найдено в базе данных (beach, temple или country)
     if (travelData[query]) {
         travelData[query].forEach(item => {
             const card = document.createElement('div');
@@ -65,7 +64,8 @@ function handleSearch() {
             resultsContainer.appendChild(card);
         });
     } else {
-        resultsContainer.innerHTML = '<p>No matching destinations found. Try "beach", "temple", or "country".</p>';
+        // Исправленный текст ошибки, чтобы пользователь знал все ключевые слова
+        resultsContainer.innerHTML = '<p>No matching destinations found. Try keywords: <strong>beach</strong>, <strong>temple</strong>, or <strong>country</strong>.</p>';
     }
 }
 
